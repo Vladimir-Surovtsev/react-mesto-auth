@@ -1,0 +1,10 @@
+.profile__pen {
+    position: absolute;
+    margin: 47px;
+}
+
+@media screen and (max-width: 744px) {
+    .profile__pen {
+        margin-left: 0;
+    }
+}

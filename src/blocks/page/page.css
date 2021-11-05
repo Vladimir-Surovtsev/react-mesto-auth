@@ -1,0 +1,11 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    font-family: 'inter', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 880px;
+    min-width: 320px;
+    margin: 0 auto;
+}

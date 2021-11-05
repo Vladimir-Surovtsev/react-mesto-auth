@@ -1,0 +1,7 @@
+.elements__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 246px;
+    margin: 250px auto auto;
+}

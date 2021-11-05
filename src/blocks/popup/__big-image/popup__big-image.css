@@ -1,0 +1,4 @@
+.popup__big-image {
+    display: flex;
+    flex-direction: column;
+}

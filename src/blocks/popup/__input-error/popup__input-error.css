@@ -1,0 +1,20 @@
+.popup__input-error {
+    position: absolute;
+    opacity: 0;
+    width: 358px;
+    height: 44px;
+    left: 36px;
+    top: 27px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #f00;
+    border-top: 1px solid #f00;
+    transition: .3s;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__input-error {
+        width: 238px;
+        left: 22px;
+    }
+}
