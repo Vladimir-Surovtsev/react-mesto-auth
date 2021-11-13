@@ -1,13 +1,11 @@
+import {
+    getResultFetch
+} from './result-fetch';
+
 class Api {
     constructor(key, baseUrl) {
         this._key = key;
         this._baseUrl = baseUrl;
-        this._getResultFetch = res => {
-            if (res.ok) {
-                return res.json();
-            }
-            return Promise.reject(`Ошибка: ${res.status}`);
-        }
     }
 
     getUserInfo() {
@@ -17,7 +15,7 @@ class Api {
                     'Content-Type': 'application/json'
                 }
             })
-            .then(this._getResultFetch)
+            .then(getResultFetch)
     }
 
     getInitialCards() {
@@ -27,7 +25,7 @@ class Api {
                     'Content-Type': 'application/json'
                 }
             })
-            .then(this._getResultFetch)
+            .then(getResultFetch)
     }
 
     editProfile(userName, aboutUser) {
@@ -42,7 +40,7 @@ class Api {
                     about: aboutUser
                 })
             })
-            .then(this._getResultFetch)
+            .then(getResultFetch)
     }
 
     initialNewCard(cardName, cardLink) {
@@ -57,19 +55,19 @@ class Api {
                     link: cardLink
                 })
             })
-            .then(this._getResultFetch)
+            .then(getResultFetch)
     }
 
     changeLikeCardStatus(id, like) {
         return fetch(`${this._baseUrl}cards/likes/${id}`, {
-          method: like ? 'PUT' : 'DELETE',
-          headers: {
-            authorization: this._key,
-            'Content-Type': 'application/json',
-          },
-        })
-          .then(this._getResultFetch)
-      }
+                method: like ? 'PUT' : 'DELETE',
+                headers: {
+                    authorization: this._key,
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(getResultFetch)
+    }
 
     deleteCard(id) {
         return fetch(`${this._baseUrl}cards/${id}`, {
@@ -79,7 +77,7 @@ class Api {
                     'Content-Type': 'application/json'
                 }
             })
-            .then(this._getResultFetch)
+            .then(getResultFetch)
     }
 
     changeAvatar(avatarLink) {
@@ -93,7 +91,7 @@ class Api {
                     avatar: avatarLink
                 })
             })
-            .then(this._getResultFetch)
+            .then(getResultFetch)
     }
 
 }

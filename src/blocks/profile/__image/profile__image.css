@@ -11,3 +11,9 @@
     opacity: .2;
     cursor: pointer;
 }
+
+@media screen and (max-width: 440px) {
+    .profile__image {
+        z-index: 0;
+    }
+  }

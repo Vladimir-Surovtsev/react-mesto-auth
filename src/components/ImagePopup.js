@@ -19,6 +19,7 @@ function ImagePopup({ card, onClose }) {
             onClose();
         }
     };
+    
     return (
         <div className={`popup popup_type_image ${card && 'popup_is-opened'}`} onMouseDown={handleOverlay}>
             <div className="popup__big-image">

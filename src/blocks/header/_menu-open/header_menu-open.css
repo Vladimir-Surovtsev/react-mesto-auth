@@ -1,0 +1,11 @@
+.header_menu-open .header__wrapper {
+  display: flex;
+}
+
+.header_menu-open .header__burger {
+  position: absolute;
+  background: transparent url('../../../images/close_small.svg') center no-repeat;
+  top: 174px;
+  right: 30px;
+  background-size: 20px;
+}
