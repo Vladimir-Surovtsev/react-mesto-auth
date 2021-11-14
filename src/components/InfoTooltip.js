@@ -29,7 +29,7 @@ function InfoTooltip({ isOpen, onClose, status: { iconType, text } = {} }) {
 
     return (
         <div className={`popup ${isOpen && "popup_is-opened"}`} onMouseDown={handleOverlay}>
-            <form className='popup__forms' noValidate>
+            <div className='popup__forms' noValidate>
                 <button
                     type='button'
                     className='popup__close'
@@ -43,7 +43,7 @@ function InfoTooltip({ isOpen, onClose, status: { iconType, text } = {} }) {
                     />
                     <p className='popup__message'>{text}</p>
                 </div>
-            </form>
+            </div>
         </div>
     );
 }

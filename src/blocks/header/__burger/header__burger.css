@@ -5,6 +5,7 @@
 @media screen and (max-width: 440px) {
   .header__burger {
     position: absolute;
+    top: 34px;
     right: 30px;
     display: block;
     color: white;

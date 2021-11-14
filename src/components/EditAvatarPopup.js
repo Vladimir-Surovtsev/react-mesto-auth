@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PopupWithForm from './PopupWithForm';
-import { useFormValidation } from "../hooks/forms"
+import { useFormValidation } from "../hooks/forms";
 
 function EditAvatarPopup({
     isOpen,

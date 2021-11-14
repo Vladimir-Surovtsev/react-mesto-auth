@@ -134,7 +134,7 @@ function App() {
   }
 
 
-  function onRegister({ email, password }) {
+  function onRegister(email, password) {
     auth.register(email, password)
       .then(() => {
         history.push('/signin');
@@ -151,13 +151,12 @@ function App() {
       })
   }
 
-  function onLogin({ email, password }) {
+  function onLogin(email, password) {
     auth.login(email, password)
       .then(() => {
         setIsLoggedIn(true);
         setEmail(email);
         history.push('/');
-        console.log('push');
       })
       .catch(() => {
         setTooltipStatus({

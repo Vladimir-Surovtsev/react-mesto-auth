@@ -1,0 +1,13 @@
+.profile__mask-avatar {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.profile__mask-avatar:hover {
+    opacity: 1;
+    cursor: pointer;
+}

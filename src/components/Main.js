@@ -17,18 +17,22 @@ function Main({
 }) {
     const currentUser = React.useContext(CurrentUserContext);
 
+    const pen = pen_avatar;
+
     return (
         <>
             <section className="profile">
-                <img src={pen_avatar}
-                    alt="Обновить аватар"
-                    className="profile__pen"
-                />
                 <img src={currentUser.avatar}
                     alt="Аватарка"
                     className="profile__image"
-                    onClick={handleAvatarClick}
                 />
+                <div className="profile__mask-avatar"
+                    onClick={handleAvatarClick}>
+                    <img src={pen}
+                        alt="Редактировать аватар"
+                        className="profile__pen-avatar"
+                    />
+                </div>
                 <div className="profile__info">
                     <div className="profile__body">
                         <h1 className="profile__title">{currentUser.name}</h1>
